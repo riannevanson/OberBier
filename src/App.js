@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import MapContainer  from './components/MapContainer';
+import CurrentLocation from './components/CurrentLocation'
+import { BrowserRouter as Route } from "react-router-dom";
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <div className="App">
+        <div className="welcome">welcome!</div>
+        <div className="welcome--home">home</div>
+        <MapContainer />
+
+        {/* <Route path="/:MapContainer" component={ MapContainer } /> */}
+        <CurrentLocation />
+      </div>
         </header>
       </div>
     );
